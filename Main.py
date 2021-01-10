@@ -1,7 +1,7 @@
 import discord
 import json
 
-with open("elquetuquieras.json") as tempfile:
+with open("keys.json") as tempfile:
     variables = json.load(tempfile)
 client = discord.Client()
 token = variables['token']
