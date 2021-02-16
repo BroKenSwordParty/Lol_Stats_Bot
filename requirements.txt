@@ -1,2 +1,4 @@
 Discord.py==1.5.1
 requests==2.25.1
+simple-orm==0.0.1
+peewee==3.14.1

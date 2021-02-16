@@ -44,9 +44,14 @@ async def on_message(message):
         print(('FlexQ = '), info_player2[1]['tier'], info_player2[1]['rank'], info_player2[1]['leaguePoints'], 'Lp -',
               info_player2[1]['wins'], 'W', info_player2[1]['losses'], 'L -',
               winrate(info_player2[1]['wins'], info_player2[1]['losses']), '% Winrate')
+        champion_mastery = requests.get(f'https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/'
+                                        f'by-summoner/{summoner_id}?api_key={api_lol}').json()
+        print(champion_mastery[0]['championId'], champion_mastery[1]['championId'], champion_mastery[2]['championId'],
+              champion_mastery[3]['championId'], champion_mastery[4]['championId'])
 
 def winrate(wins, losses):
     calculator = round((wins*100)/(losses+wins))
     return calculator
+
 
 client.run(token)
