@@ -7,4 +7,3 @@ with open("keys.json") as tempfile:
 
 class Prefixes(Enum):
         INFO = prefix + "info "
-    # prefix.info = inf

@@ -25,9 +25,3 @@ def save_champions():
     db.close()
 
 
-# print(champions_json['data']['Aatrox']['key'])
-# for champion in champions_json:
-#   print(champion)
-# print(champions_json)
-
-save_champions()
