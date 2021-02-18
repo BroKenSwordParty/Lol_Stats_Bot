@@ -1,4 +1,3 @@
-from orm import Model
 from peewee import *
 
 db = SqliteDatabase('db.sqlite')
